@@ -6,7 +6,7 @@ const app = express();
 
 mongoose
  .connect(
-    "mongodb+srv://shekhar:9958075951@cluster0.qtjsk.mongodb.net/grphQL-demo?retryWrites=true&w=majority",
+    `mongodb+srv://${process.env.username}:${process.env.password}@cluster0.qtjsk.mongodb.net/grphQL-demo?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true }
  )
  .then(() => console.log("Connected to MongoDB Atlas"))
